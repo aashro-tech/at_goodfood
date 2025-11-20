@@ -1,0 +1,26 @@
+<style type="text/css">
+    .heading_container h2 { font-weight: bold; color: #1d1e31; position: relative; text-transform: uppercase; font-size: 1.5rem; }
+    .heading_container hr { margin: 0 10px; border: none; flex: 1; max-width: 200px; height: 3px; background-color: #51b5ef; }
+    .about_section .detail-box p { margin-top: 5px; font-size: 12.5px; }
+    .about_section .detail-box a { display: inline-block; padding: 8px 35px; background-color: #262626; color: #ffffff; border: 1px solid #262626; margin-top: 12px; pointer-events: none; }
+</style>
+<section class="about_section{f:if(condition: '!{parentRecord}', then: ' layout_margin')}">
+    <div class="container-fluid">
+        <div class="row" style="align-items: center;">
+            <div class="col-md-5 offset-md-1">
+                <div class="detail-box">
+                    <f:if condition="{data.tx_mask_abouttitle}"><div class="heading_container" style="display: flex; align-items: center;"><h2>{data.tx_mask_abouttitle -> f:format.nl2br()}</h2><hr></div></f:if>
+                    <f:if condition="{data.tx_mask_aboutdesc}">{data.tx_mask_aboutdesc -> f:format.raw()}</f:if>
+                    <f:if condition="{data.tx_mask_btn_name} &&  {data.tx_mask_btn_link}">
+                        <f:link.typolink parameter="{data.tx_mask_btn_link}">{data.tx_mask_btn_name}</f:link.typolink>
+                    </f:if>
+                </div>
+            </div>
+            <f:if condition="{data.tx_mask_aboutimg}">
+                <div class="col-md-6 px-0">
+                    <div class="img-box"><f:for each="{data.tx_mask_aboutimg}" as="file"><img src="{f:uri.image(image: '{file}', maxWidth: 877.5)}" /></f:for></div>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</section>

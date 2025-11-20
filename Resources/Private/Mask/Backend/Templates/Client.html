@@ -1,0 +1,37 @@
+<style type="text/css">
+    .client_section .box .client_id h4 { margin: 0; margin-left: 15px; font-size: 1.5rem; }
+</style>
+<section class="client_section layout_padding">
+    <div class="container">
+        <f:if condition="{data.tx_mask_client_heading}"><div class="heading_container" style="justify-content: flex-end; display: flex; align-items: center;"><hr><h2 style="margin: 0;">{data.tx_mask_client_heading}</h2></div></f:if>
+        <f:if condition="{data.tx_mask_carousel_item}">
+            <div id="carouselExample2Indicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExample2Indicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExample2Indicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExample2Indicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExample2Indicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <f:for each="{data.tx_mask_carousel_item}" as="data_item" iteration="i">
+                        <div class="carousel-item{f:if(condition: '{i.isFirst}', then: ' active')}">
+                            <div class="box" style="width: 75%; margin: 55px auto;">
+                                <div class="client_id" style="display: flex; align-items: center;">
+                                    <f:if condition="{data_item.tx_mask_client_img}">
+                                        <div class="img-box">
+                                            <f:for each="{data_item.tx_mask_client_img}" as="file">
+                                                <img src="{f:uri.image(image: '{file}', width: 140, height: 140)}" class="img-fluid" />
+                                            </f:for>
+                                        </div>
+                                    </f:if>
+                                    <f:if condition="{data_item.tx_mask_client_name}"><h4>{data_item.tx_mask_client_name}</h4></f:if>
+                                </div>
+                                <f:if condition="{data_item.tx_mask_client_info}"><div class="detail-box" style="margin-top: 25px; font-size: 1.1rem;">{data_item.tx_mask_client_info -> f:format.raw()}</div></f:if>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </f:if>
+    </div>
+</section>

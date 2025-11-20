@@ -1,0 +1,37 @@
+config {
+
+    # Global common configuration
+    doctype = html5
+    xmlprologue = none
+    linkVars = L
+    uniqueLinkVars = 0
+    admPanel = 0
+    extTarget = _blank
+    fileTarget = _blank
+
+    # Mail Spamming Security
+    # spamProtectEmailAddresses = ascii
+
+    # For Caching
+    cache_period = 86400
+    no_cache = {$at_goodfood.website.settings.no_cache}
+
+    # For Debugging
+    contentObjectExceptionHandler = 0
+
+    # For enable indexed search
+    index_enable = 1
+
+    # index files
+    index_externals = 1
+
+    # don't index metatags
+    index_metatags = 0
+
+    # Site Optimization
+    moveJsFromHeaderToFooter = 1
+    compressJs = {$at_goodfood.website.settings.compress_js}
+    compressCss = {$at_goodfood.website.settings.compress_css}
+    concatenateJs = {$at_goodfood.website.settings.concatenate_js}
+    concatenateCss = {$at_goodfood.website.settings.concatenate_css}
+}

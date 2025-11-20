@@ -1,0 +1,1102 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "sys_file_reference": {
+            "sql": {
+                "tx_mask_image": {
+                    "sys_file_reference": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            }
+        },
+        "tt_content": {
+            "elements": {
+                "about_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_abouttitle",
+                        "tx_mask_aboutdesc",
+                        "tx_mask_btn_name",
+                        "tx_mask_btn_link",
+                        "tx_mask_aboutimg"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "about_section",
+                    "label": "About_Section",
+                    "labels": [
+                        "AboutTitle",
+                        "AboutDescription",
+                        "Button name",
+                        "Button link",
+                        "AboutImage"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 10
+                },
+                "app_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_appimg",
+                        "tx_mask_app_desc",
+                        "tx_mask_appstoreimg",
+                        "tx_mask_playstoreimg"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "app_section",
+                    "label": "App_Section",
+                    "labels": [
+                        "AppImage",
+                        "App description",
+                        "AppStoreImage",
+                        "PlayStoreImage"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "client": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_client_heading",
+                        "tx_mask_carousel_item"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "client",
+                    "label": "Client",
+                    "labels": [
+                        "ClientHeading",
+                        "CarouselInner"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 11
+                },
+                "contact_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_cnt_title",
+                        "tx_mask_form",
+                        "tx_mask_location_icon",
+                        "tx_mask_location_info",
+                        "tx_mask_call_icon",
+                        "tx_mask_tele_link",
+                        "tx_mask_mail_icon",
+                        "tx_mask_mail_link"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "contact_section",
+                    "label": "Contact_Section",
+                    "labels": [
+                        "Contact title",
+                        "Contact form",
+                        "Location icon",
+                        "Location",
+                        "Call icon",
+                        "Telephone no\/link",
+                        "E-mail icon",
+                        "E-mail address"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "food_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_dish_imgs",
+                        "tx_mask_foodheading",
+                        "tx_mask_foodesc",
+                        "tx_mask_fd_btn_name",
+                        "tx_mask_fd_btn_link"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "food_section",
+                    "label": "Food_Section",
+                    "labels": [
+                        "Dishes images",
+                        "FoodHeading",
+                        "FoodDescription",
+                        "Button name",
+                        "Button link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "hot_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_hotheading",
+                        "tx_mask_desc",
+                        "tx_mask_hot_carousel"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "hot_section",
+                    "label": "Hot_Section",
+                    "labels": [
+                        "Hot heading",
+                        "Hot description",
+                        "Carousel"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "slider_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_side_heading",
+                        "tx_mask_crsl_imgs",
+                        "tx_mask_detailboxdesc",
+                        "tx_mask_btn1_name",
+                        "tx_mask_btn1_link",
+                        "tx_mask_btn2_name",
+                        "tx_mask_btn2_link"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "slider_section",
+                    "label": "Slider_Section",
+                    "labels": [
+                        "Right side heading",
+                        "Carousel images",
+                        "Carousel details",
+                        "Button1 name",
+                        "Button1 link",
+                        "Button2 name",
+                        "Button2 link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 9
+                }
+            },
+            "sql": {
+                "tx_mask_aboutdesc": {
+                    "tt_content": {
+                        "tx_mask_aboutdesc": "mediumtext"
+                    }
+                },
+                "tx_mask_aboutimg": {
+                    "tt_content": {
+                        "tx_mask_aboutimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_abouttitle": {
+                    "tt_content": {
+                        "tx_mask_abouttitle": "mediumtext"
+                    }
+                },
+                "tx_mask_app_desc": {
+                    "tt_content": {
+                        "tx_mask_app_desc": "mediumtext"
+                    }
+                },
+                "tx_mask_appimg": {
+                    "tt_content": {
+                        "tx_mask_appimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_appstoreimg": {
+                    "tt_content": {
+                        "tx_mask_appstoreimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_btn1_link": {
+                    "tt_content": {
+                        "tx_mask_btn1_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_btn1_name": {
+                    "tt_content": {
+                        "tx_mask_btn1_name": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_btn2_link": {
+                    "tt_content": {
+                        "tx_mask_btn2_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_btn2_name": {
+                    "tt_content": {
+                        "tx_mask_btn2_name": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_btn_link": {
+                    "tt_content": {
+                        "tx_mask_btn_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_btn_name": {
+                    "tt_content": {
+                        "tx_mask_btn_name": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_call_icon": {
+                    "tt_content": {
+                        "tx_mask_call_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_carousel_item": {
+                    "tt_content": {
+                        "tx_mask_carousel_item": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_client_heading": {
+                    "tt_content": {
+                        "tx_mask_client_heading": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_cnt_title": {
+                    "tt_content": {
+                        "tx_mask_cnt_title": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_crsl_imgs": {
+                    "tt_content": {
+                        "tx_mask_crsl_imgs": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_desc": {
+                    "tt_content": {
+                        "tx_mask_desc": "mediumtext"
+                    }
+                },
+                "tx_mask_detailboxdesc": {
+                    "tt_content": {
+                        "tx_mask_detailboxdesc": "mediumtext"
+                    }
+                },
+                "tx_mask_dish_imgs": {
+                    "tt_content": {
+                        "tx_mask_dish_imgs": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_fd_btn_link": {
+                    "tt_content": {
+                        "tx_mask_fd_btn_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_fd_btn_name": {
+                    "tt_content": {
+                        "tx_mask_fd_btn_name": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_foodesc": {
+                    "tt_content": {
+                        "tx_mask_foodesc": "mediumtext"
+                    }
+                },
+                "tx_mask_foodheading": {
+                    "tt_content": {
+                        "tx_mask_foodheading": "mediumtext"
+                    }
+                },
+                "tx_mask_form": {
+                    "tt_content": {
+                        "tx_mask_form": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_hot_carousel": {
+                    "tt_content": {
+                        "tx_mask_hot_carousel": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_hotheading": {
+                    "tt_content": {
+                        "tx_mask_hotheading": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_location_icon": {
+                    "tt_content": {
+                        "tx_mask_location_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_location_info": {
+                    "tt_content": {
+                        "tx_mask_location_info": "mediumtext"
+                    }
+                },
+                "tx_mask_mail_icon": {
+                    "tt_content": {
+                        "tx_mask_mail_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_mail_link": {
+                    "tt_content": {
+                        "tx_mask_mail_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_playstoreimg": {
+                    "tt_content": {
+                        "tx_mask_playstoreimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_side_heading": {
+                    "tt_content": {
+                        "tx_mask_side_heading": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_tele_link": {
+                    "tt_content": {
+                        "tx_mask_tele_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_aboutdesc": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_aboutdesc",
+                    "key": "aboutdesc",
+                    "type": "richtext"
+                },
+                "tx_mask_aboutimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_aboutimg",
+                    "imageoverlayPalette": 1,
+                    "key": "aboutimg",
+                    "type": "file"
+                },
+                "tx_mask_abouttitle": {
+                    "config": {
+                        "cols": "7",
+                        "nullable": 0,
+                        "required": 1,
+                        "rows": "3",
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "fullKey": "tx_mask_abouttitle",
+                    "key": "abouttitle",
+                    "type": "text"
+                },
+                "tx_mask_app_desc": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_app_desc",
+                    "key": "app_desc",
+                    "type": "richtext"
+                },
+                "tx_mask_appimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_appimg",
+                    "imageoverlayPalette": 1,
+                    "key": "appimg",
+                    "type": "file"
+                },
+                "tx_mask_appstoreimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_appstoreimg",
+                    "imageoverlayPalette": 1,
+                    "key": "appstoreimg",
+                    "type": "file"
+                },
+                "tx_mask_btn1_link": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_btn1_link",
+                    "key": "btn1_link",
+                    "type": "link"
+                },
+                "tx_mask_btn1_name": {
+                    "config": {
+                        "nullable": 0,
+                        "size": "11",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_btn1_name",
+                    "key": "btn1_name",
+                    "type": "string"
+                },
+                "tx_mask_btn2_link": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_btn2_link",
+                    "key": "btn2_link",
+                    "type": "link"
+                },
+                "tx_mask_btn2_name": {
+                    "config": {
+                        "nullable": 0,
+                        "size": "11",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_btn2_name",
+                    "key": "btn2_name",
+                    "type": "string"
+                },
+                "tx_mask_btn_link": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_btn_link",
+                    "key": "btn_link",
+                    "type": "link"
+                },
+                "tx_mask_btn_name": {
+                    "config": {
+                        "nullable": 0,
+                        "size": "09",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_btn_name",
+                    "key": "btn_name",
+                    "type": "string"
+                },
+                "tx_mask_call_icon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_call_icon",
+                    "imageoverlayPalette": 1,
+                    "key": "call_icon",
+                    "type": "file"
+                },
+                "tx_mask_carousel_item": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_carousel_item",
+                    "key": "carousel_item",
+                    "type": "inline"
+                },
+                "tx_mask_client_heading": {
+                    "config": {
+                        "nullable": 0,
+                        "required": 1,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_client_heading",
+                    "key": "client_heading",
+                    "type": "string"
+                },
+                "tx_mask_cnt_title": {
+                    "config": {
+                        "nullable": 0,
+                        "required": 1,
+                        "size": "10",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_cnt_title",
+                    "key": "cnt_title",
+                    "type": "string"
+                },
+                "tx_mask_crsl_imgs": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_crsl_imgs",
+                    "imageoverlayPalette": 1,
+                    "key": "crsl_imgs",
+                    "type": "file"
+                },
+                "tx_mask_desc": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_desc",
+                    "key": "desc",
+                    "type": "richtext"
+                },
+                "tx_mask_detailboxdesc": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "required": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_detailboxdesc",
+                    "key": "detailboxdesc",
+                    "type": "richtext"
+                },
+                "tx_mask_dish_imgs": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_dish_imgs",
+                    "imageoverlayPalette": 1,
+                    "key": "dish_imgs",
+                    "type": "file"
+                },
+                "tx_mask_fd_btn_link": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_fd_btn_link",
+                    "key": "fd_btn_link",
+                    "type": "link"
+                },
+                "tx_mask_fd_btn_name": {
+                    "config": {
+                        "nullable": 0,
+                        "size": "10",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_fd_btn_name",
+                    "key": "fd_btn_name",
+                    "type": "string"
+                },
+                "tx_mask_foodesc": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_foodesc",
+                    "key": "foodesc",
+                    "type": "richtext"
+                },
+                "tx_mask_foodheading": {
+                    "config": {
+                        "cols": "6",
+                        "nullable": 0,
+                        "required": 1,
+                        "rows": "3",
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "fullKey": "tx_mask_foodheading",
+                    "key": "foodheading",
+                    "type": "text"
+                },
+                "tx_mask_form": {
+                    "cTypes": [
+                        "form_formframework"
+                    ],
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "tt_content",
+                        "maxitems": "1",
+                        "overrideChildTca": {
+                            "columns": {
+                                "colPos": {
+                                    "config": {
+                                        "default": 999
+                                    }
+                                }
+                            }
+                        },
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_form",
+                    "key": "form",
+                    "type": "content"
+                },
+                "tx_mask_hot_carousel": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_hot_carousel",
+                    "key": "hot_carousel",
+                    "type": "inline"
+                },
+                "tx_mask_hotheading": {
+                    "config": {
+                        "nullable": 0,
+                        "required": 1,
+                        "size": "10",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_hotheading",
+                    "key": "hotheading",
+                    "type": "string"
+                },
+                "tx_mask_location_icon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_location_icon",
+                    "imageoverlayPalette": 1,
+                    "key": "location_icon",
+                    "type": "file"
+                },
+                "tx_mask_location_info": {
+                    "config": {
+                        "cols": "20",
+                        "nullable": 0,
+                        "rows": "2",
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "fullKey": "tx_mask_location_info",
+                    "key": "location_info",
+                    "type": "text"
+                },
+                "tx_mask_mail_icon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_mail_icon",
+                    "imageoverlayPalette": 1,
+                    "key": "mail_icon",
+                    "type": "file"
+                },
+                "tx_mask_mail_link": {
+                    "config": {
+                        "allowedTypes": [
+                            "email"
+                        ],
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_mail_link",
+                    "key": "mail_link",
+                    "type": "link"
+                },
+                "tx_mask_playstoreimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_playstoreimg",
+                    "imageoverlayPalette": 1,
+                    "key": "playstoreimg",
+                    "type": "file"
+                },
+                "tx_mask_side_heading": {
+                    "config": {
+                        "nullable": 0,
+                        "size": "15",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_side_heading",
+                    "key": "side_heading",
+                    "type": "string"
+                },
+                "tx_mask_tele_link": {
+                    "config": {
+                        "allowedTypes": [
+                            "telephone"
+                        ],
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_tele_link",
+                    "key": "tele_link",
+                    "type": "link"
+                }
+            }
+        },
+        "tx_mask_carousel_item": {
+            "sql": {
+                "tx_mask_client_img": {
+                    "tx_mask_carousel_item": {
+                        "tx_mask_client_img": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_client_info": {
+                    "tx_mask_carousel_item": {
+                        "tx_mask_client_info": "mediumtext"
+                    }
+                },
+                "tx_mask_client_name": {
+                    "tx_mask_carousel_item": {
+                        "tx_mask_client_name": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_client_img": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_client_img",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_carousel_item",
+                    "key": "client_img",
+                    "label": "ClientImage",
+                    "order": 1,
+                    "type": "file"
+                },
+                "tx_mask_client_info": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "required": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_client_info",
+                    "inlineParent": "tx_mask_carousel_item",
+                    "key": "client_info",
+                    "label": "Client information",
+                    "order": 3,
+                    "type": "richtext"
+                },
+                "tx_mask_client_name": {
+                    "config": {
+                        "nullable": 0,
+                        "required": 1,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_client_name",
+                    "inlineParent": "tx_mask_carousel_item",
+                    "key": "client_name",
+                    "label": "ClientName",
+                    "order": 2,
+                    "type": "string"
+                }
+            }
+        },
+        "tx_mask_hot_carousel": {
+            "sql": {
+                "tx_mask_crsl_desc": {
+                    "tx_mask_hot_carousel": {
+                        "tx_mask_crsl_desc": "mediumtext"
+                    }
+                },
+                "tx_mask_item_img": {
+                    "tx_mask_hot_carousel": {
+                        "tx_mask_item_img": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_orderbtn": {
+                    "tx_mask_hot_carousel": {
+                        "tx_mask_orderbtn": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_orderbtnlink": {
+                    "tx_mask_hot_carousel": {
+                        "tx_mask_orderbtnlink": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_crsl_desc": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_crsl_desc",
+                    "inlineParent": "tx_mask_hot_carousel",
+                    "key": "crsl_desc",
+                    "label": "Carousel description",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_item_img": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_item_img",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_hot_carousel",
+                    "key": "item_img",
+                    "label": "Item image",
+                    "order": 1,
+                    "type": "file"
+                },
+                "tx_mask_orderbtn": {
+                    "config": {
+                        "nullable": 0,
+                        "size": "10",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_orderbtn",
+                    "inlineParent": "tx_mask_hot_carousel",
+                    "key": "orderbtn",
+                    "label": "Button name",
+                    "order": 3,
+                    "type": "string"
+                },
+                "tx_mask_orderbtnlink": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_orderbtnlink",
+                    "inlineParent": "tx_mask_hot_carousel",
+                    "key": "orderbtnlink",
+                    "label": "Button link",
+                    "order": 4,
+                    "type": "link"
+                }
+            }
+        }
+    }
+}

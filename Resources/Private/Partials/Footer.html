@@ -1,0 +1,17 @@
+<section class="container-fluid footer_section">
+  <f:if condition="{settings.socialmedia}">
+    <div class="social_container">
+      <h4><f:cObject typoscriptObjectPath="lib.socialmediaTitle" /></h4>
+      <div class="social-box"><f:render  section="SocialMedia" arguments="{_all}" /></div>
+    </div>
+  </f:if>
+  <f:if condition="{settings.copyright}"><p><f:cObject typoscriptObjectPath="lib.copyright" /></p></f:if>
+</section>
+
+<f:section name="SocialMedia">
+  <f:if condition="{SocialMedia}">
+    <f:for each="{SocialMedia}" as="item">
+      <a href="{item.link}"><img src="{f:uri.image(image: '{item.icon.0.originalFile}', maxWidth: 38.5, maxHeight: 38.5)}" alt="{item.navIcon.0.alternative}" /></a>
+    </f:for>
+  </f:if>
+</f:section>

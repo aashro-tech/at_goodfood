@@ -1,0 +1,30 @@
+<section class="app_section">
+    <div class="container">
+        <div class="row">
+            <f:if condition="{data.tx_mask_appimg}">
+                <div class="col-md-4">
+                    <div class="img-box"><f:for each="{data.tx_mask_appimg}" as="file"><img src="{f:uri.image(image: '{file}', width: 360, height: 601.6)}" /></f:for></div>
+                </div>
+            </f:if>
+            <div class="col-md-6 offset-md-2">
+                <div class="detail-box">
+                    <f:if condition="{data.tx_mask_app_desc}">{data.tx_mask_app_desc -> f:format.html()}</f:if>
+                    <f:if condition="{data.tx_mask_appstoreimg} || {data.tx_mask_playstoreimg}">
+                        <div class="btn-box">
+                            <f:if condition="{data.tx_mask_appstoreimg}">
+                                <f:for each="{data.tx_mask_appstoreimg}" as="file">
+                                    <f:link.typolink parameter="{file.link}"><img src="{f:uri.image(image: '{file}', width: 133.5, height: 40)}" /></f:link.typolink>
+                                </f:for>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_playstoreimg}">
+                                <f:for each="{data.tx_mask_playstoreimg}" as="file">
+                                    <f:link.typolink parameter="{file.link}"><img src="{f:uri.image(image: '{file}', width: 133.5, height: 40)}" /></f:link.typolink>
+                                </f:for>
+                            </f:if>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

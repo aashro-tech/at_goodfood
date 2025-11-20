@@ -1,0 +1,33 @@
+<section class="hot_section layout_padding">
+    <div class="container">
+        <f:if condition="{data.tx_mask_hotheading}"><div class="heading_container"><h2>{data.tx_mask_hotheading}</h2><hr></div></f:if>
+        <f:if condition="{data.tx_mask_desc}">{data.tx_mask_desc -> f:format.html()}</f:if>
+    </div>
+    <f:if condition="{data.tx_mask_hot_carousel}">
+        <div class="carousel_container">
+            <div class="container">
+                <div class="carousel-wrap">
+                    <div class="owl-carousel">
+                        <f:for each="{data.tx_mask_hot_carousel}" as="data_item">
+                            <div class="item">
+                                <div class="box">
+                                    <f:if condition="{data_item.tx_mask_item_img}">
+                                        <div class="img-box">
+                                            <f:for each="{data_item.tx_mask_item_img}" as="file"><img src="{f:uri.image(image: '{file}', width: 239, height: 135)}" /></f:for>
+                                        </div>
+                                    </f:if>
+                                    <div class="detail-box">
+                                        <f:if condition="{data_item.tx_mask_crsl_desc}">{data_item.tx_mask_crsl_desc -> f:format.html()}</f:if>
+                                        <f:if condition="{data_item.tx_mask_orderbtn} && {data_item.tx_mask_orderbtnlink}">
+                                            <f:link.typolink parameter="{data_item.tx_mask_orderbtnlink}">{data_item.tx_mask_orderbtn}</f:link.typolink>
+                                        </f:if>
+                                    </div>
+                                </div>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:if>
+</section>

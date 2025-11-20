@@ -1,0 +1,59 @@
+########################
+### General Settings ###
+########################
+
+# customsubcategory=100=Header configuration
+# customsubcategory=110=Footer configuration
+# customsubcategory=120=SEO configuration
+
+at_goodfood {
+    website {
+        settings {
+            #cat = at_goodfood/100/01; type=string; label=Upload Logo
+            logo = /fileadmin/at_goodfood/logo.png
+
+            #cat = at_goodfood/100/02; type=string; label=Favicon Icon
+            favicon = fileadmin/at_goodfood/icons8-food-96.png
+
+            #cat = at_goodfood/100/03; type=int; label=Main Menu Id
+            main_menu = 1
+
+            #cat = at_goodfood/100/04; type=string; label=Root Page Id
+            rootpage = 1
+
+            #cat = at_goodfood/110/01; type=int; label=Social Media storage Id
+            socialmedia =
+
+            #cat = at_goodfood/110/02; type=string; label=Copyright Text: Write down your footer's copyright content
+            copyright =
+            
+            #cat = at_goodfood/120/01; type=string; label=Default Meta Robots: Set meta robots data
+            seo_robots_default = FOLLOW,INDEX
+
+            #cat = at_goodfood/120/02; type=string; label=Google Analytics ID: Setup Google Analytics Tracking ID to enable Google access to track your website
+            googleanalytics =
+
+            #cat = at_goodfood/130/01; type=boolean; label=Disable Cache
+            no_cache =
+
+            #cat = at_goodfood/130/02; type=boolean; label=Compress JavaScript
+            compress_js = 
+
+            #cat = at_goodfood/130/03; type=boolean; label=Compress CSS
+            compress_Css =
+
+            #cat = at_goodfood/130/04; type=boolean; label=Concatenate JavaScript
+            concatenate_js =
+
+            #cat = at_goodfood/130/05; type=boolean; label=Concatenate CSS
+            concatenate_css =
+        }
+
+        # Define paths for templates, layout and partial
+        paths {
+            templateRootPath = EXT:at_goodfood/Resources/Private/Templates/
+            layoutRootPath = EXT:at_goodfood/Resources/Private/Layouts/
+            partialRootPath = EXT:at_goodfood/Resources/Private/Partials/
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<section class="contact_section layout_padding{f:if(condition: '!{parentRecord}', then: '', else: '-bottom')}">
+    <div class="container">
+        <f:if condition="{data.tx_mask_cnt_title}"><h2>{data.tx_mask_cnt_title}</h2></f:if>
+        <div class="row">
+            <f:if condition="{data.tx_mask_form}">
+                <div class="col-md-7">
+                    <div class="form_container">
+                        <f:for each="{data.tx_mask_form}" as="data_item"><f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject></f:for>
+                    </div>
+                </div>
+            </f:if>
+            <div class="col-md-5">
+                <div class="contact_box">
+                    <f:if condition="{data.tx_mask_location_icon} || {data.tx_mask_location_info}">
+                        <f:link.typolink parameter="/" additionalAttributes="{style: 'pointer-events: none;'}">
+                            <f:if condition="{data.tx_mask_location_icon}">
+                                <div class="img-box"><f:for each="{data.tx_mask_location_icon}" as="file"><img src="{f:uri.image(image: '{file}', maxWidth: 22.5, maxHeight: 31)}" /></f:for></div>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_location_info}"><h6>{data.tx_mask_location_info}</h6></f:if>
+                        </f:link.typolink>
+                    </f:if>
+                    <f:if condition="{data.tx_mask_call_icon} || {data.tx_mask_tele_link}">
+                        <f:link.typolink parameter="{data.tx_mask_tele_link}">
+                            <f:if condition="{data.tx_mask_call_icon}">
+                                <div class="img-box"><f:for each="{data.tx_mask_call_icon}" as="file"><img src="{f:uri.image(image: '{file}', maxWidth: 22.5, maxHeight: 31)}" /></f:for></div>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_tele_link}"><h6>{data.tx_mask_tele_link}</h6></f:if>
+                        </f:link.typolink>
+                    </f:if>
+                    <f:if condition="{data.tx_mask_mail_icon} || {data.tx_mask_mail_link}">
+                        <f:link.typolink parameter="{data.tx_mask_mail_link}">
+                            <f:if condition="{data.tx_mask_mail_icon}">
+                                <div class="img-box"><f:for each="{data.tx_mask_mail_icon}" as="file"><img src="{f:uri.image(image: '{file}', maxWidth: 22.5, maxHeight: 31)}" /></f:for></div>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_mail_link}"><h6><f:format.trim characters="mailto:" side="left">{data.tx_mask_mail_link}</f:format.trim></h6></f:if>
+                        </f:link.typolink>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

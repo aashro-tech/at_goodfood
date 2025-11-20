@@ -1,0 +1,2 @@
+// Include the BackendLayouts
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:at_goodfood/Configuration/PageTSconfig/BackendLayouts" extensions="typoscript">

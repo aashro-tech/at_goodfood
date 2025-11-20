@@ -1,0 +1,158 @@
+
+renderingOptions:
+  submitButtonLabel: SEND
+type: Form
+identifier: getintouch
+label: 'Get in touch'
+prototypeName: standard
+finishers:
+  -
+    options:
+      message: 'We are thankful to you for contact us...!'
+      contentElementUid: ''
+    identifier: Confirmation
+  -
+    options:
+      subject: Feedback
+      recipients:
+        '{email-1}': '{text-1}'
+      senderAddress: aashrotech@gmail.com
+      senderName: 'Aashro Tech'
+      addHtmlPart: true
+      attachUploads: true
+      title: 'Have a nice day!!!!'
+    identifier: EmailToSender
+  -
+    options:
+      subject: Feedback
+      recipients:
+        aashrotech@gmail.com: 'Aashro Tech'
+      senderAddress: '{email-1}'
+      senderName: '{text-1}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: ''
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: Name
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Name must required !'
+            -
+              code: 1221560718
+              message: 'Name must required !'
+            -
+              code: 1347992400
+              message: 'Name must required !'
+            -
+              code: 1347992453
+              message: 'Name must required !'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Telephone
+        identifier: telephone-1
+        label: ''
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: 'Phone number'
+          validationErrorMessages:
+            -
+              code: 1221565130
+              message: 'Invalid telephone number !'
+            -
+              code: 1221560910
+              message: 'Telephone number must required !'
+            -
+              code: 1221560718
+              message: 'Telephone number must required !'
+            -
+              code: 1347992400
+              message: 'Telephone number must required !'
+            -
+              code: 1347992453
+              message: 'Telephone number must required !'
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            options:
+              regularExpression: '/^(?:\+?\d{1,3}[ -]?)?(?:\(?\d{2,4}\)?[ -]?)?\d{3,4}[ -]?\d{4}$/'
+            identifier: RegularExpression
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email-1
+        label: ''
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: Email
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Email must required !'
+            -
+              code: 1221560718
+              message: 'Email must required !'
+            -
+              code: 1347992400
+              message: 'Email must required !'
+            -
+              code: 1347992453
+              message: 'Email must required !'
+            -
+              code: 1221559976
+              message: 'Invalid email address !'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: ''
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Message
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Please share your message/query to us !'
+            -
+              code: 1221560718
+              message: 'Please share your message/query to us !'
+            -
+              code: 1347992400
+              message: 'Please share your message/query to us !'
+            -
+              code: 1347992453
+              message: 'Please share your message/query to us !'
+        validators:
+          -
+            identifier: NotEmpty

@@ -1,0 +1,58 @@
+<style type="text/css">
+    .slider_section .side_heading { position: absolute; top: 45%; right: 25px; transform: translateY(-50%); }
+    .slider_section .side_heading h5 { writing-mode: tb-rl; text-orientation: upright; font-family: 'American Typewriter', sans-serif; font-weight: 600; font-size: 20px; }
+    .slider_section #carouselExampleIndicators { max-width: 400px; padding: 65px 0 60px 0; background-color: #ffffff; display: flex; flex-direction: column; border-radius: 25px; box-shadow: 2px 10px 25px 0 rgba(0, 0, 0, 0.1); height: 400px; justify-content: space-between; margin: auto; }
+    .slider_section .img-box.b-1 { margin-left: 20%; }
+    .slider_section .img-box { margin: 15px 20px; height: 240px; display: flex; justify-content: center; align-items: center; }
+    .slider_section .img-box img { width: 100%; max-height: 100%; }
+    .carousel-item { position: relative; float: left; width: 100%; margin-right: -100%; }
+    .slider_section .carousel-indicators { margin: 0; position: unset; font-family: 'American Typewriter', sans-serif; font-weight: 600; list-style: none; }
+    .slider_section .detail-box::before { content: ""; position: absolute; left: -31%; top: 26px; width: 25%; height: 5px; background-color: #10e276; }
+    .slider_section .detail-box { margin-top: 65px; position: relative; }
+    .slider_section .detail-box h1 { text-transform: uppercase; font-size: 3.5rem; font-family: 'American Typewriter', sans-serif; font-weight: 600; }
+    .slider_section .detail-box p { color: #272727; font-size: 1rem; }
+    .slider_section .detail-box .btn-box { margin-top: 35px; }
+    .slider_section .detail-box .btn-box .btn-1 { display: inline-block; padding: 10px 0px; background-color: #51b5ef; color: #ffffff; border: 1px solid #51b5ef; text-transform: uppercase; margin-right: 10px; }
+    .slider_section .detail-box .btn-box a { text-align: center; width: 180px; pointer-events: none;}
+    .slider_section .detail-box .btn-box .btn-2 { display: inline-block; padding: 10px 0px; background-color: #262626; color: #ffffff; border: 1px solid #262626; text-transform: uppercase; }
+</style>
+<section class="slider_section position-relative" style="display: flex; align-items: center; padding: 45px 0 90px 0;">
+    <f:if condition="{data.tx_mask_side_heading}"><div class="side_heading"><h5>{data.tx_mask_side_heading}</h5></div></f:if>
+    <div class="container-fluid">
+        <div class="row">
+            <f:if condition="{data.tx_mask_crsl_imgs}">
+                <div class="col-lg-3 col-md-4">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <f:for each="{data.tx_mask_crsl_imgs}" as="file" iteration="i">
+                                <f:if condition="{i.isFirst}">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="{i.index}" style="color: #959494;">0{i.cycle}</li>
+                                </f:if>
+                            </f:for>
+                        </ol>
+                        <div class="carousel-inner">
+                            <f:for each="{data.tx_mask_crsl_imgs}" as="file" iteration="i">
+                                <div class="carousel-item{f:if(condition: '{i.isFirst}', then: ' active')}" style="width: 100%;">
+                                    <div class="img-box b-{i.cycle}"><img src="{f:uri.image(image: '{file}', width: 360)}" /></div>
+                                </div>
+                            </f:for>
+                        </div>
+                    </div>
+                </div>
+            </f:if>
+            <div class="col-md-7 offset-md-1">
+                <div class="detail-box">
+                    <f:if condition="{data.tx_mask_detailboxdesc}">{data.tx_mask_detailboxdesc -> f:format.raw()}</f:if>
+                    <div class="btn-box">
+                        <f:if condition="{data.tx_mask_btn1_name} && {data.tx_mask_btn1_link}">
+                            <f:link.typolink parameter="{data.tx_mask_btn1_link}" class="btn-1">{data.tx_mask_btn1_name}</f:link.typolink>
+                        </f:if>
+                        <f:if condition="{data.tx_mask_btn2_name} && {data.tx_mask_btn2_link}">
+                            <f:link.typolink parameter="{data.tx_mask_btn2_link}" class="btn-2">{data.tx_mask_btn2_name}</f:link.typolink>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

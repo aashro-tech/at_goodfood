@@ -1,0 +1,22 @@
+<section class="dish_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <f:if condition="{data.tx_mask_dish_imgs}">
+                <div class="col-md-6">
+                    <div class="dish_container">
+                        <f:for each="{data.tx_mask_dish_imgs}" as="imgs"><div class="box"><img src="{f:uri.image(image: '{imgs}', width: 237.5, height: 189)}" /></div></f:for>
+                    </div>
+                </div>
+            </f:if>
+            <div class="col-md-6">
+                <div class="detail-box">
+                    <f:if condition="{data.tx_mask_foodheading}"><div class="heading_container"><hr><h2>{data.tx_mask_foodheading -> f:format.nl2br()}</h2></div></f:if>
+                    <f:if condition="{data.tx_mask_foodesc}">{data.tx_mask_foodesc -> f:format.html()}</f:if>
+                    <f:if condition="{data.tx_mask_fd_btn_name} && {data.tx_mask_fd_btn_link}">
+                        <f:link.typolink parameter="{data.tx_mask_fd_btn_link}">{data.tx_mask_fd_btn_name}</f:link.typolink>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

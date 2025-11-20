@@ -1,0 +1,76 @@
+
+renderingOptions:
+  submitButtonLabel: Subscribe
+type: Form
+identifier: ourNewsletter
+label: 'Our Newsletter'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: Newsletter
+      recipients:
+        '{email-1}': ''
+      senderAddress: aashrotech@gmail.com
+      senderName: 'Aashro Tech'
+      addHtmlPart: true
+      attachUploads: true
+      title: ''
+    identifier: EmailToSender
+  -
+    options:
+      subject: Newsletter
+      recipients:
+        aashrotech@gmail.com: 'Aashro Tech'
+      senderAddress: '{email-1}'
+      senderName: ''
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      message: "Thank you for subscription ......We'll be back to you soon!"
+      contentElementUid: ''
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email-1
+        label: ''
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'Enter your email'
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Email must required !'
+            -
+              code: 1221560718
+              message: 'Email must required !'
+            -
+              code: 1347992400
+              message: 'Email must required !'
+            -
+              code: 1347992453
+              message: 'Email must required !'
+            -
+              code: 1221559976
+              message: 'Invalid email address !'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty

@@ -1,0 +1,35 @@
+<style type="text/css">
+    .app_section { background-image: url(/fileadmin/at_goodfood/app-bg.jpg); background-size: 100% 86%; background-repeat: no-repeat; color: #ffffff; background-position: bottom; }
+    .app_section .detail-box h2 { text-transform: uppercase; font-weight: bold; margin-bottom: 35px; font-size: 2rem; }
+    .app_section .detail-box h2 span { font-size: 1.5em; }
+    .app_section .detail-box p { font-size: 1.1rem; }
+    .app_section .detail-box .btn-box a { margin-right: 15px; pointer-events: none; }
+</style>
+<section class="app_section">
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <f:if condition="{data.tx_mask_appimg}">
+                <div class="col-md-4">
+                    <div class="img-box"><f:for each="{data.tx_mask_appimg}" as="file"><img src="{f:uri.image(image: '{file}', maxWidth: 449.5)}" /></f:for></div>
+                </div>
+            </f:if>
+            <div class="col-md-6 offset-md-1">
+                <div class="detail-box">
+                    <f:if condition="{data.tx_mask_app_desc}">{data.tx_mask_app_desc -> f:format.raw()}</f:if>
+                    <div class="btn-box" style="margin-top: 25px;">
+                        <f:if condition="{data.tx_mask_appstoreimg}">
+                            <f:for each="{data.tx_mask_appstoreimg}" as="file">
+                                <f:link.typolink parameter="{file.link}"><img src="{f:uri.image(image: '{file}', maxWidth: 133.5)}" /></f:link.typolink>
+                            </f:for>
+                        </f:if>
+                        <f:if condition="{data.tx_mask_playstoreimg}">
+                            <f:for each="{data.tx_mask_playstoreimg}" as="file">
+                                <f:link.typolink parameter="{file.link}"><img src="{f:uri.image(image: '{file}', maxWidth: 133.5)}" /></f:link.typolink>
+                            </f:for>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

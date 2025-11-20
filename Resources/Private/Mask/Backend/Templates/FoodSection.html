@@ -1,0 +1,30 @@
+<style type="text/css">
+    .dish_section .dish_container .box { flex-basis: calc(50% - 20px); margin: 10px; border: 10px solid #f8f8f8; }
+    .dish_section .dish_container .box img { width: 100%; }
+    .dish_section .detail-box a { display: inline-block; padding: 8px 35px; background-color: #262626; color: #ffffff; border: 1px solid #262626; margin-top: 30px; pointer-events: none; }
+    .dish_section .detail-box p { font-size: 18px; }
+    .heading_container hr { margin: 0 10px; border: none; flex: 1; max-width: 200px; height: 3px; background-color: #51b5ef; }
+    .heading_container h2 { font-weight: bold; color: #1d1e31; position: relative; text-transform: uppercase; font-size: 1.5rem; }
+</style>
+<section class="dish_section layout_padding">
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <f:if condition="{data.tx_mask_dish_imgs}">
+                <div class="col-md-6">
+                    <div class="dish_container" style="display: flex; flex-wrap: wrap;">
+                        <f:for each="{data.tx_mask_dish_imgs}" as="imgs"><div class="box"><img src="{f:uri.image(image: '{imgs}', maxWidth: 244.5)}" /></div></f:for>
+                    </div>
+                </div>
+            </f:if>
+            <div class="col-md-6">
+                <div class="detail-box" style="padding-left: 10%; text-align: right;">
+                    <f:if condition="{data.tx_mask_foodheading}"><div class="heading_container" style="justify-content: flex-end; display: flex; align-items: center;"><hr><h2>{data.tx_mask_foodheading -> f:format.nl2br()}</h2></div></f:if>
+                    <f:if condition="{data.tx_mask_foodesc}">{data.tx_mask_foodesc -> f:format.raw()}</f:if>
+                    <f:if condition="{data.tx_mask_fd_btn_name} && {data.tx_mask_fd_btn_link}">
+                        <f:link.typolink parameter="{data.tx_mask_fd_btn_link}">{data.tx_mask_fd_btn_name}</f:link.typolink>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

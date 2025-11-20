@@ -1,0 +1,8 @@
+# Includes Basic Configuration of website
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:at_goodfood/Configuration/TypoScript/Configuration" extensions="typoscript">
+
+# Includes EXT:Form Configuration
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:at_goodfood/Configuration/TypoScript/Extensions/Form/" extensions="typoscript">
+
+# Includes Page Configuration
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:at_goodfood/Configuration/TypoScript/Page" extensions="typoscript">

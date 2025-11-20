@@ -1,0 +1,145 @@
+########################
+### MAIN PAGE OBJECT ###
+########################
+
+[page["is_siteroot"] != 1]
+page.bodyTag = <body class="sub_page">
+[END]
+
+page = PAGE
+page {
+
+    // Set default page typenum
+    typeNum = 0
+
+    // Setup favion
+    shortcutIcon = {$at_goodfood.website.settings.favicon}
+
+    // Set viewport
+    meta {
+        viewport = width=device-width, initial-scale=1.0
+    }
+
+    headerData{
+        10 = TEXT
+        10.value {}
+    }
+
+    // Initiate all the css-together
+    includeCSS {
+        10 =  https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css
+        20 =  EXT:at_goodfood/Resources/Public/stylesheet/bootstrap.css
+        30 =  https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap"
+        40 =  EXT:at_goodfood/Resources/Public/stylesheet/style.css
+        50 =  EXT:at_goodfood/Resources/Public/stylesheet/responsive.css
+    }
+
+    // Initiate all the js-together
+    includeJSFooter {
+        40 = EXT:at_goodfood/Resources/Public/javascript/jquery-3.4.1.min.js
+        50 = EXT:at_goodfood/Resources/Public/javascript/bootstrap.js
+        60 = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js
+        70 = EXT:at_goodfood/Resources/Public/javascript/custom.js
+    }
+
+    // Let's start fluid_styled_content
+    10 = FLUIDTEMPLATE
+    10 {
+        settings {
+            logo = {$at_goodfood.website.settings.logo}
+            rootpage = {$at_goodfood.website.settings.rootpage}
+            socialmedia = {$at_goodfood.website.settings.socialmedia}
+            copyright = {$at_goodfood.website.settings.copyright}
+        }
+
+        layoutRootPath = {$at_goodfood.website.paths.layoutRootPath}
+        partialRootPath = {$at_goodfood.website.paths.partialRootPath}
+        templateRootPath = {$at_goodfood.website.paths.templateRootPath}
+
+        // Let's automatically choose backend layout and template
+        file.stdWrap.cObject = CASE
+        file.stdWrap.cObject {
+            key {
+                data = levelfield:-1, backend_layout_next_level, slide
+                override.field = backend_layout
+            }
+
+            default = TEXT
+            default.value = {$at_goodfood.website.paths.templateRootPath}Default.html
+        }
+
+        // Generate menu with DataProcessing
+        dataProcessing {
+
+            // Main menu
+            101 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            101 {
+                levels = 5
+                special = directory
+                special.value = {$at_goodfood.website.settings.main_menu}
+                expandAll = 1
+                includeSpacer = 1
+                as = MainMenu
+            }
+
+            // SocialMedia menu
+            102 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            102 {
+                levels = 5
+                special = directory
+                special.value = {$at_goodfood.website.settings.socialmedia}
+                expandAll = 1
+                includeSpacer = 1
+                as = SocialMedia
+                dataProcessing {
+                    110 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    110 {
+                        as = icon
+                        references.fieldName = media
+                        references.table = pages
+                    }
+                }
+            }
+        }
+    }
+}
+
+#########################
+### GLOBAL LIB OBJECT ###
+#########################
+
+lib {
+    // Define default content
+    content = CONTENT
+    content < styles.content.get
+
+    headerContent < lib.content
+    headerContent.select.where = colPos = 0
+
+    slidersection < lib.content
+    slidersection.select.where = colPos = 1
+
+    mainContent < lib.content
+    mainContent.select.where = colPos = 2
+
+    socialmediaTitle = TEXT
+    socialmediaTitle.data = DB:pages:{$at_goodfood.website.settings.socialmedia}:title
+
+    // Footer's dynamic copyright text
+    copyright = COA
+    copyright {
+        stdWrap.wrap = | 
+
+        1 = TEXT
+        1 {
+            strftime = © %Y |
+            wrap = ||
+        }
+
+        2 = TEXT
+        2 {
+            value = {$at_goodfood.website.settings.copyright}
+            wrap = &nbsp;|
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<div class="hero_area">
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+                <a href="/" class="navbar-brand"><f:if condition="{settings.logo}"><img src="{f:uri.image(src: '{settings.logo}')}" /></f:if><span>Goid</span></a>
+                <div class="navbar-collapse" id="">
+                    <div class="custom_menu-btn">
+                        <button onclick="openNav()">
+                            <span class="s-1"> </span>
+                            <span class="s-2"> </span>
+                            <span class="s-3"> </span>
+                        </button>
+                    </div>
+                    <div id="myNav" class="overlay"><div class="overlay-content"><f:render section="MainMenu" arguments="{_all}" /></div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Slider_Section_start -->
+    <f:cObject typoscriptObjectPath="lib.slidersection" />
+    <!-- Slider_Section_end -->
+</div>
+
+<f:section name="MainMenu">
+    <f:if condition="{MainMenu}"><f:for each="{MainMenu}" as="item"><a href="{item.link}" title="{item.title}">{item.title}</a></f:for></f:if>
+</f:section>

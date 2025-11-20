@@ -1,0 +1,29 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          110: EXT:at_goodfood/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+      prototypes:
+        standard:
+          finishersDefinition:
+            Confirmation:
+              options:
+                templateName: 'Confirmation'
+                templateRootPaths:
+                  10: 'EXT:at_goodfood/Resources/Private/Extensions/Form/Templates/Finishers/Confirmation/'
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                honeypot:
+                  enable: false
+                  formElementToUse: Honeypot
+                templateRootPaths:
+                  10: 'EXT:at_goodfood/Resources/Private/Extensions/Form/Templates/'
+                partialRootPaths:
+                  10: 'EXT:at_goodfood/Resources/Private/Extensions/Form/Partials/'
+                translation:
+                  translationFile:
+                    110: 'EXT:at_goodfood/Resources/Private/Language/locallang.xlf'

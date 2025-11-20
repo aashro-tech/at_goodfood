@@ -1,0 +1,24 @@
+<section class="about_section{f:if(condition: '!{parentRecord}', then: ' layout_margin')}">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 offset-md-1">
+                <div class="detail-box">
+                    <f:if condition="{data.tx_mask_abouttitle}"><div class="heading_container"><h2>{data.tx_mask_abouttitle -> f:format.nl2br()}</h2><hr></div></f:if>
+                    <f:if condition="{data.tx_mask_aboutdesc}">{data.tx_mask_aboutdesc -> f:format.html()}</f:if>
+                    <f:if condition="{data.tx_mask_btn_name} &&  {data.tx_mask_btn_link}">
+                        <f:link.typolink parameter="{data.tx_mask_btn_link}">{data.tx_mask_btn_name}</f:link.typolink>
+                    </f:if>
+                </div>
+            </div>
+            <f:if condition="{data.tx_mask_aboutimg}">
+                <div class="col-md-6 px-0">
+                    <div class="img-box">
+                        <f:for each="{data.tx_mask_aboutimg}" as="file">
+                            <img src="{f:uri.image(image: file, width: '917', height: '632.917')}" />
+                        </f:for>
+                    </div>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</section>

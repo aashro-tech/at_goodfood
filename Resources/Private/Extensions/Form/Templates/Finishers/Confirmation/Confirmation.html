@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+<section class="subscribe_section">
+    <div id="{form.identifier}" class="subscribe_message">
+        <f:if condition="{isPreparedMessage}">
+            <f:then>
+                hellow
+                {message -> f:format.raw()}
+            </f:then>
+            <f:else>
+                {message -> f:format.nl2br()}
+            </f:else>
+        </f:if>
+    </div>
+</section>
+</html>

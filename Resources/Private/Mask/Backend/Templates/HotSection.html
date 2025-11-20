@@ -1,0 +1,44 @@
+<style type="text/css">
+    .hot_section .heading_container h2 { margin-bottom: 0; }
+    .hot_section .carousel_container { border: 1px solid #c2c2c2; padding: 45px 0 15px 0; margin-top: 30px; border-left: none; border-right: none; }
+    .hot_section .carousel-wrap { margin: 0 auto; padding: 0 5%; position: relative; }
+    .hot_section .box .detail-box a { display: inline-block; padding: 7px 20px; background-color: #262626; color: #ffffff; border: 1px solid #262626; margin-top: 5px; pointer-events: none; }
+    .hot_section .box .img-box { position: relative; display: flex; justify-content: center; align-items: center; height: 135px; }
+    .hot_section .box .img-box img { width: 75%; }
+    .hot_section .box .detail-box { margin-top: 25px; }
+    .hot_section .box .detail-box p { font-size: 1.02rem; }
+    .hot_section .box .detail-box h4 { font-size: 1.5rem; }
+</style>
+<section class="hot_section layout_padding">
+    <div class="container">
+        <f:if condition="{data.tx_mask_hotheading}"><div class="heading_container" style="display: flex; align-items: center;"><h2>{data.tx_mask_hotheading}</h2><hr></div></f:if>
+        <f:if condition="{data.tx_mask_desc}">{data.tx_mask_desc -> f:format.raw()}</f:if>
+    </div>
+    <f:if condition="{data.tx_mask_hot_carousel}">
+        <div class="carousel_container">
+            <div class="container">
+                <div class="carousel-wrap">
+                    <div class="owl-carousel" style="display: flex;">
+                        <f:for each="{data.tx_mask_hot_carousel}" as="data_item">
+                            <div class="item" style="margin-right: 35px;">
+                                <div class="box" style="text-align: center;">
+                                    <f:if condition="{data_item.tx_mask_item_img}">
+                                        <div class="img-box">
+                                            <f:for each="{data_item.tx_mask_item_img}" as="file"><img src="{f:uri.image(image: '{file}')}" /></f:for>
+                                        </div>
+                                    </f:if>
+                                    <div class="detail-box">
+                                        <f:if condition="{data_item.tx_mask_crsl_desc}">{data_item.tx_mask_crsl_desc -> f:format.raw()}</f:if>
+                                        <f:if condition="{data_item.tx_mask_orderbtn} && {data_item.tx_mask_orderbtnlink}">
+                                            <f:link.typolink parameter="{data_item.tx_mask_orderbtnlink}">{data_item.tx_mask_orderbtn}</f:link.typolink>
+                                        </f:if>
+                                    </div>
+                                </div>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:if>
+</section>
